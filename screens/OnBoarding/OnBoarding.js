@@ -37,7 +37,7 @@ const OnBoarding = ({ navigation }) => {
                     constants.onboarding_screens.map((item, index) => {
                         const dotColor = dotPosition.interpolate({
                             inputRange: [index - 1, index, index + 1],
-                            outputRange: [COLORS.lightOrange, COLORS.primary, COLORS.lightOrange],
+                            outputRange: [COLORS.lightOrange, COLORS.coffee, COLORS.lightOrange],
                             extrapolate: "clamp"
                         })
 
@@ -130,6 +130,7 @@ const OnBoarding = ({ navigation }) => {
                         <TextButton
                             label="Next"
                             buttonContainerStyle={{
+                                backgroundColor: COLORS.coffee,
                                 height: 60,
                                 width: 200,
                                 borderRadius: SIZES.radius
@@ -154,6 +155,7 @@ const OnBoarding = ({ navigation }) => {
                         <TextButton
                             label="Let's Get Started"
                             buttonContainerStyle={{
+                                backgroundColor: COLORS.coffee,
                                 height: 60,
                                 borderRadius: SIZES.radius
                             }}

@@ -62,9 +62,11 @@ const Rewards = ({ navigation, appTheme }) => {
                 >
                     <View
                         style={{
-                            width: 70,
-                            height: 70,
-                            borderRadius: 35,
+                            marginTop:30,
+                            paddingTop:10,
+                            width: 90,
+                            height: 90,
+                            borderRadius: 45,
                             alignItems: 'center',
                             justifyContent: 'center',
                             backgroundColor: COLORS.white

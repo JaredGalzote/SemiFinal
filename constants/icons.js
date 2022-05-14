@@ -15,7 +15,8 @@ const profile = require("../assets/icons/profile.png")
 const sunny = require("../assets/icons/sunny.png")
 const search = require("../assets/icons/search.png")
 const coffee_cup = require("../assets/icons/coffee-cup.png")
-const reward_cup = require("../assets/icons/reward-cup.png")
+const reward_cup = require("../assets/icons/coffee.png")
+const reward_cup2 = require("../assets/icons/reward-cup.png")
 
 
 export default {
@@ -36,5 +37,6 @@ export default {
     sunny,
     search,
     coffee_cup,
-    reward_cup
+    reward_cup,
+    reward_cup2
 }

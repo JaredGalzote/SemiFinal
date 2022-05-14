@@ -52,7 +52,7 @@ const HeaderBar = ({appTheme, toggleTheme}) => {
                     marginHorizontal: SIZES.padding,
                     height: 40,
                     borderRadius: 20,
-                    backgroundColor: COLORS.lightPurple
+                    backgroundColor: COLORS.white
                 }}
                 onPress={() => toggleThemeHandler()}
             >{/* light */}
@@ -72,7 +72,7 @@ const HeaderBar = ({appTheme, toggleTheme}) => {
                 style={{
                     height: 30,
                     width: 30,
-                    tintColor: COLORS.white
+                    tintColor: COLORS.lightGray2
             }}
                 />
             </View>
@@ -92,7 +92,7 @@ const HeaderBar = ({appTheme, toggleTheme}) => {
                 style={{
                     height: 30,
                     width: 30,
-                    tintColor: COLORS.white
+                    tintColor: COLORS.lightGray2
             }}
                 />
             </View>
@@ -109,7 +109,8 @@ const styles = StyleSheet.create({
     },
     selectedLightModeStyle:{
         borderRadius: 25,
-        backgroundColor: COLORS.yellow
+        backgroundColor: COLORS.skined
+
     }
 })
 

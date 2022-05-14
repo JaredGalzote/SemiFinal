@@ -181,12 +181,13 @@ const OrderDetail = ({ navigation, route, appTheme }) => {
                                         COLORS.primary : COLORS.gray2
                                 }}
 
-                            ><Text style={{ color: COLORS.white, ...FONTS.body3 }}>20oz</Text>
+                            >
+                            <Text style={{ color: appTheme.textColor, ...FONTS.body3 }}>20oz</Text>
                             </ImageBackground>
                             <Text
                                 style={{
                                     marginTop: 3,
-                                    color: COLORS.white,
+                                    color: appTheme.textColor,
                                     ...FONTS.body3
                                 }}>₱75</Text>
                         </TouchableOpacity>
@@ -213,12 +214,12 @@ const OrderDetail = ({ navigation, route, appTheme }) => {
                                         COLORS.primary : COLORS.gray2
                                 }}
 
-                            ><Text style={{ color: COLORS.white, ...FONTS.body3 }}>32oz</Text>
+                            ><Text style={{ color: appTheme.textColor, ...FONTS.body3 }}>32oz</Text>
                             </ImageBackground>
                             <Text
                                 style={{
                                     marginTop: 3,
-                                    color: COLORS.white,
+                                    color: appTheme.textColor,
                                     ...FONTS.body3
                                 }}>₱100</Text>
                         </TouchableOpacity>
@@ -305,7 +306,7 @@ const OrderDetail = ({ navigation, route, appTheme }) => {
                         <Text
                             style={{
                                 marginTop: SIZES.base,
-                                color: COLORS.white,
+                                color: appTheme.textColor,
                                 ...FONTS.body3
                             }}
                         >

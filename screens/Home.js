@@ -164,7 +164,7 @@ const Home = ({ navigation, appTheme }) => {
                     }}
                 >
                     <ImageBackground
-                        source={icons.reward_cup}
+                        source={icons.reward_cup2}
                         resizeMode='contain'
                         style={{
                             width: 85,

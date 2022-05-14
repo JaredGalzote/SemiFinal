@@ -96,7 +96,7 @@ const SignIn = ({ navigation }) => {
                                     tintColor: email == "" ?
                                         COLORS.gray : (email != "" &&
                                             emailError == "") ? COLORS.
-                                            green : COLORS.red
+                                            green : COLORS.coffee
                                 }}
                             />
                         </TouchableOpacity>
