@@ -72,6 +72,7 @@ const ForgotPassword = ({ navigation }) => {
                     disabled={isEnableSendEmail() ? false : true}
                     buttonContainerStyle={{
                         height: 55,
+                        borderRadius: SIZES.radius,
                         alignItems: 'center',
                         marginTop: SIZES.padding,
                         backgroundColor: isEnableSendEmail() ? COLORS.primary : COLORS.transparentPrimary

@@ -43,7 +43,7 @@ const FormInput = ({
                     paddingHorizontal: SIZES.padding,
                     marginTop: SIZES.base,
                     borderRadius: SIZES.radius,
-                    backgroundColor: COLORS.lightGray2
+                    backgroundColor: COLORS.textinput
                 
                 }}
             >
