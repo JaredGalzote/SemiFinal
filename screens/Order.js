@@ -173,12 +173,11 @@ const Order = ({ navigation, route, appTheme }) => {
                     onPress={()=> setSelectedCategory("Snack")}
                     />
                    
-
-
                     <VerticalTextButton
                     label="Coffee"
                     containerStyle={{
-                        marginTop: 50
+                        marginTop: 50,
+                        width: 100
                     }}
                     selected={selectedCategory == "Coffee"}
                     onPress={()=> setSelectedCategory("Coffee")}
@@ -196,7 +195,7 @@ const Order = ({ navigation, route, appTheme }) => {
                     label="Specialtea"
                     containerStyle={{
                         marginTop: 90,
-                        width: 100
+                        width: 110
                     }}
                     selected={selectedCategory == "Specialtea"}
                     onPress={()=> setSelectedCategory("Specialtea")}
@@ -204,8 +203,8 @@ const Order = ({ navigation, route, appTheme }) => {
                     <VerticalTextButton
                     label="Milk Tea"
                     containerStyle={{
-                        marginTop: 80,
-                        width: 80
+                        marginTop: 90,
+                        width:90
                     }}
                     selected={selectedCategory == "Milk Tea"}
                     onPress={()=> setSelectedCategory("Milk Tea")}

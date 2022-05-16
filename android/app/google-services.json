@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "173558642816",
+    "project_id": "grabtea-32f07",
+    "storage_bucket": "grabtea-32f07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173558642816:android:2715afa58a738a05d44e65",
+        "android_client_info": {
+          "package_name": "com.milkteashopapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "173558642816-ug3tsqksa4obab01o7gn2gk2m2e9i1da.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhI2RpsTRR423-FxWp_y_6b1-ITOkwbHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "173558642816-ug3tsqksa4obab01o7gn2gk2m2e9i1da.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

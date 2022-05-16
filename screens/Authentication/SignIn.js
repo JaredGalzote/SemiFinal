@@ -5,7 +5,7 @@ import {
     TouchableOpacity,
     Image
 } from 'react-native';
-
+import auth from '@react-native-firebase/auth';
 import { AuthLayout } from "../";
 import { FONTS, COLORS, SIZES, icons } from "../../constants";
 
@@ -30,7 +30,6 @@ const SignIn = ({ navigation }) => {
         return email != "" && password != "" && emailError == ""
 
     }
-
 
     return (
         <AuthLayout
@@ -141,7 +140,7 @@ const SignIn = ({ navigation }) => {
                         backgroundColor: isEnableSignIn() ? COLORS.primary :
                             COLORS.transparentPrimary
                     }}
-                    onPress={() => navigation.navigate("Home")}
+                    onPress={value => { navigation.navigate('Home') }}
                 />
 
                 {/* sign up */}
@@ -176,7 +175,7 @@ const SignIn = ({ navigation }) => {
 
                 </View>
                 {/* footer*/}
-              
+
             </View>
         </AuthLayout>
     )

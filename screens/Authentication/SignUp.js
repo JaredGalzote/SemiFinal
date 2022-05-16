@@ -5,11 +5,12 @@ import {
     TouchableOpacity,
     Image
 } from 'react-native';
-
 import { AuthLayout } from '../';
 import { FONTS, SIZES, COLORS, icons } from '../../constants';
 import { FormInput, TextButton, TextIconButton } from '../../components';
 import { utils } from '../../utils';
+
+import auth from '@react-native-firebase/auth';
 
 const SignUp = ({ navigation }) => {
 
@@ -21,12 +22,24 @@ const SignUp = ({ navigation }) => {
     const [emailError, setEmailError] = React.useState("")
     const [usernameError, setUsernameError] = React.useState("")
     const [passwordError, setPasswordError] = React.useState("")
-
+    
     function isEnableSignUp() {
         return email != "" && username != "" && password != "" &&
             emailError == "" && passwordError == "" && usernameError == ""
+    
     }
-
+    
+    const createUser =()=> {
+        auth ()
+            .createUserWithEmailAndPassword(email, password)
+            .then((userCredentials ) => {
+                const user = userCredentials.user;
+                console.log('Register', user.email);
+                navigation.navigate("SignIn")
+            })
+            .catch(error => alert(error.message))
+               
+    }
     return (
         <AuthLayout
             title="Getting Started"
@@ -147,7 +160,7 @@ const SignUp = ({ navigation }) => {
                         backgroundColor: isEnableSignUp() ?
                             COLORS.primary : COLORS.transparentPrimary
                     }}
-                    onPress={() => navigation.navigate("SignIn")}
+                    onPress={createUser}
                 />
                 <View
                     style={{
@@ -171,7 +184,7 @@ const SignUp = ({ navigation }) => {
                     />
 
                 </View>
-                </View>
+            </View>
 
         </AuthLayout>
     )
