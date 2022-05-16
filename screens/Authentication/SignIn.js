@@ -3,7 +3,8 @@ import {
     View,
     Text,
     TouchableOpacity,
-    Image
+    Image,
+    Alert
 } from 'react-native';
 import auth from '@react-native-firebase/auth';
 import { AuthLayout } from "../";
@@ -30,7 +31,16 @@ const SignIn = ({ navigation }) => {
         return email != "" && password != "" && emailError == ""
 
     }
-
+    const userLogin = () => {
+          auth()
+          .signInWithEmailAndPassword(email, password)
+          .then((res) => {
+            console.log(res)
+            console.log('User logged-in successfully!')
+            navigation.navigate('Home')
+          })
+          .catch((e) => Alert.alert('Login Failed', e.message));
+        }
     return (
         <AuthLayout
             title="Let's Sign You In"
@@ -140,7 +150,7 @@ const SignIn = ({ navigation }) => {
                         backgroundColor: isEnableSignIn() ? COLORS.primary :
                             COLORS.transparentPrimary
                     }}
-                    onPress={value => { navigation.navigate('Home') }}
+                    onPress={userLogin}
                 />
 
                 {/* sign up */}
