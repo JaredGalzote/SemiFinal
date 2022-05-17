@@ -38,7 +38,7 @@ const SignIn = ({ navigation }) => {
             console.log(res)
             console.log('User logged-in successfully!')
           })
-          .catch((e) => Alert.alert('Login Failed', e.message));
+          .catch((e) => Alert.alert('Your password is incorrect or this account doesn’t exist'));
         }
     return (
         <AuthLayout

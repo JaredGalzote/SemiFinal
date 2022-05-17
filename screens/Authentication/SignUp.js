@@ -3,7 +3,8 @@ import {
     View,
     Text,
     TouchableOpacity,
-    Image
+    Image,
+    Alert
 } from 'react-native';
 import { AuthLayout } from '../';
 import { FONTS, SIZES, COLORS, icons } from '../../constants';
@@ -30,14 +31,16 @@ const SignUp = ({ navigation }) => {
     }
     
     const createUser =()=> {
-        auth ()
-            .createUserWithEmailAndPassword(email, password)
-            .then((userCredentials ) => {
-                const user = userCredentials.user;
-                console.log('Register', user.email);
-                navigation.navigate("SignIn")
-            })
-            .catch(error => alert(error.message))
+        auth()
+        .createUserWithEmailAndPassword(email, password)
+        .then(() => {
+          console.log('User account created & signed in!');
+        })
+        .catch(error => {
+          if (error.code === 'auth/email-already-in-use') {
+            Alert.alert('This email address is already in use!');
+          }
+        });
                
     }
     return (

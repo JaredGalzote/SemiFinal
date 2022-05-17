@@ -43,7 +43,7 @@ const Profile = ({ navigation, appTheme }) => {
                     </Text>
 
                     <Text style={{ marginTop: 10, color: appTheme.textColor, width: SIZES.width * 0.6, textAlign: 'center', ...FONTS.h3, lineHeight: 18 }}>
-                        Name: {user.email}
+                        Name: 
                     </Text>
                 </View>
             )
