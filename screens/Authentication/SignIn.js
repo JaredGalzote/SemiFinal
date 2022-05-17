@@ -37,7 +37,6 @@ const SignIn = ({ navigation }) => {
           .then((res) => {
             console.log(res)
             console.log('User logged-in successfully!')
-            navigation.navigate('Home')
           })
           .catch((e) => Alert.alert('Login Failed', e.message));
         }

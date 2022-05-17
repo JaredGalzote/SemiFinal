@@ -1,8 +1,9 @@
 import React from 'react';
-import { Location, Order, OrderDetail ,Profile } from "./screens";
+import { Location, Order, OrderDetail, Profile } from "./screens";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
 import SplashScreen from 'react-native-splash-screen'
+import auth from '@react-native-firebase/auth';
 
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
@@ -23,12 +24,25 @@ const store = createStore(
     applyMiddleware(thunk)
 )
 
-const App = () => {
 
+const App = () => {
+    // Set an initializing state whilst Firebase connects
+    const [initializing, setInitializing] = React.useState(true);
+    const [user, setUser] = React.useState();
+
+    // Handle user state changes
+    function onAuthStateChanged(user) {
+        setUser(user);
+        if (initializing) setInitializing(false);
+    }
     React.useEffect(() => {
         SplashScreen.hide();
+        const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
+        return subscriber; // unsubscribe on unmount
     }, [])
+    if (initializing) return null;
 
+    if (!user) {
     return (
         <Provider store={store}>
             <NavigationContainer>
@@ -37,7 +51,7 @@ const App = () => {
                         headerShown: false
                     }}
                     initialRouteName={'OnBoarding'}
-                    >
+                >
                     <Stack.Screen
                         name="OnBoarding"
                         component={OnBoarding}
@@ -57,6 +71,18 @@ const App = () => {
                         name="ForgotPassword"
                         component={ForgotPassword}
                     />
+                </Stack.Navigator>
+            </NavigationContainer>
+        </Provider>
+    );}
+    return (
+        <Provider store={store}>
+            <NavigationContainer>
+                <Stack.Navigator
+                screenOptions={{
+                    headerShown: false
+                }}
+                >
                     <Stack.Screen
                         name="Home"
                         component={Tabs}
@@ -76,14 +102,13 @@ const App = () => {
                         name="OrderDetail"
                         component={OrderDetail}
                     />
-                     <Stack.Screen
+                    <Stack.Screen
                         name="Profile"
                         component={Profile}
                     />
                 </Stack.Navigator>
             </NavigationContainer>
         </Provider>
-    )
-}
+    )}
 
 export default App;
