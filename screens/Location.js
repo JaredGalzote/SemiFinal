@@ -153,34 +153,19 @@ const Location = ({ navigation, appTheme }) => {
                         onPress={() => navigation.navigate("Order", { selectedLocation: item })}
                     >
                         {/* Name & Bookmark */}
-                        <View
-                            style={{ flexDirection: 'row' }}
-                        >
+                        <View style={{ flexDirection: 'row' }} >
                             <Text style={{ flex: 1, color: appTheme.textColor, ...FONTS.h2 }}>{item.title}</Text>
-
-                            <Image
-                                source={item.bookmarked ? icons.bookmarkFilled : icons.bookmark}
+                            <Image source={item.bookmarked ? icons.bookmarkFilled : icons.bookmark}
                                 style={{
                                     height: 20,
                                     width: 20,
                                     tintColor: item.bookmarked ? COLORS.red2 : COLORS.white
-                                }}
-                            />
+                                }}/>
                         </View>
+
                         {/* Address */}
-                        <View
-                            style={{
-                                marginTop: SIZES.base,
-                                width: "80%"
-                            }}
-                        >
-                            <Text
-                                style={{
-                                    color: appTheme.textColor,
-                                    ...FONTS.body3,
-                                    lineHeight: 21
-                                }}
-                            >
+                        <View style={{ marginTop: SIZES.base, width: "80%"}}>
+                            <Text style={{color: appTheme.textColor,...FONTS.body3,lineHeight: 21}}>
                                 {item.address}
                             </Text>
 
@@ -188,10 +173,7 @@ const Location = ({ navigation, appTheme }) => {
                         </View>
                         {/* Operation Hours */}
                         <View
-                            style={{
-                                marginTop: SIZES.base
-                            }}
-                            >
+                            style={{ marginTop: SIZES.base}}>
                                 <Text
                                     style={{
                                         color: appTheme.textColor,

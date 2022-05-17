@@ -129,6 +129,7 @@ const Tabs = ({ appTheme, scrollX,onPromoTabsPress }) => {
     )
 }
 
+
 const Home = ({ navigation, appTheme }) => {
 
     const scrollX = React.useRef(new Animated.Value(0)).current;

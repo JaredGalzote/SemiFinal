@@ -1,5 +1,5 @@
 import React from 'react';
-import { Location, Order, OrderDetail } from "./screens";
+import { Location, Order, OrderDetail ,Profile } from "./screens";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
 import SplashScreen from 'react-native-splash-screen'
@@ -75,6 +75,10 @@ const App = () => {
                     <Stack.Screen
                         name="OrderDetail"
                         component={OrderDetail}
+                    />
+                     <Stack.Screen
+                        name="Profile"
+                        component={Profile}
                     />
                 </Stack.Navigator>
             </NavigationContainer>

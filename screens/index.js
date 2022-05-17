@@ -11,6 +11,7 @@ import Location from "./Location"
 import Order from "./Order"
 import OrderDetail from "./OrderDetail"
 import Rewards from "./Rewards"
+import Profile from "./Profile"
 
 export {
     Home,
@@ -18,6 +19,7 @@ export {
     Order,
     OrderDetail,
     Rewards,
+    Profile,
     OnBoarding,
     AuthLayout,
     SignIn,
