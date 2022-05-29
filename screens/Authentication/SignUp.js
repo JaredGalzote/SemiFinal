@@ -32,7 +32,7 @@ const SignUp = ({ navigation }) => {
     
     const createUser =()=> {
         auth()
-        .createUserWithEmailAndPassword(email, password)
+        .createUserWithEmailAndPassword(email, password, username)
         .then(() => {
           console.log('User account created & signed in!');
         })

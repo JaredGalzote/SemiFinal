@@ -204,21 +204,6 @@ const Location = ({ navigation, appTheme }) => {
                                 <Text
                                 style={{ color: appTheme.textColor, ...FONTS.body3 }}>Pick-Up</Text>
                             </View>
-                            
-                            {/* Delivery */}
-                            <View
-                                style={{
-                                    borderColor: appTheme.textColor,
-                                    borderWidth:1,
-                                    borderRadius: 20,
-                                    paddingHorizontal: SIZES.radius,
-                                    paddingVertical: 5,
-                                    marginLeft: 5
-                                }}
-                            >
-                                <Text
-                                style={{ color: appTheme.textColor, ...FONTS.body3 }}>Delivery</Text>
-                            </View>
                         </View>
                     </TouchableOpacity>
                 )}
